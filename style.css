@@ -1,0 +1,261 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  font-family: open sans, sans-serif;
+  color: #444;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: raleway, sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.nav {
+  height: 5vh;
+  padding: 2rem 0;
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+}
+
+.nav h1 {
+  font-family: raleway, sans-serif;
+  text-transform: uppercase;
+  position: fixed;
+  top: 20px;
+  left: 10px;
+  font-size: 32px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  margin-top: -10px;
+}
+
+.nav-item {
+  margin: 0 2rem;
+}
+
+.nav-item a {
+  color: black;
+}
+
+.nav a,
+.nav a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: raleway, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #888;
+  white-space: nowrap;
+  transition: 0.3s;
+  position: relative;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.nav > ul > li > a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #34b7a7;
+  visibility: hidden;
+  width: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+.nav a:hover:before,
+.nav li:hover > a:before,
+.nav .active:before {
+  visibility: visible;
+  width: 25px;
+}
+.nav a:hover,
+.nav .active,
+.nav .active:focus,
+.nav li:hover > a {
+  color: #222;
+}
+
+.sosmed {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: -19px;
+  margin-right: 28px;
+}
+
+.sosmed i {
+  margin: 0 0.4rem;
+  font-size: 1.1rem;
+}
+
+header {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background: linear-gradient(90deg, rgba(247, 166, 223, 1) 0%, rgba(243, 249, 157, 1) 76%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+header h1 {
+  margin-top: 20px;
+  text-transform: capitalize;
+  color: black;
+  font-weight: 50px;
+  font-size: 50px;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+header h3 {
+  text-transform: capitalize;
+  color: #6f6f6f;
+  margin: 10px 0 0;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+header .btn-about {
+  font-family: raleway, sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin-top: 30px;
+  color: #fff;
+  background: #ff00dd;
+  text-decoration: none;
+}
+
+section {
+  height: 100%;
+  padding: 100px 0;
+  background-color: rgb(243, 241, 241);
+}
+.section-bg {
+  background-color: #e7f8f6;
+}
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #34b7a7;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.gambar1 img {
+  position: relative;
+  left: 7%;
+}
+
+.about-list {
+  position: relative;
+  margin-top: -19.4rem;
+  left: 32%;
+  list-style: none;
+}
+
+.about-list ul {
+  list-style: none;
+}
+
+.about-list h3 {
+  position: absolute;
+  top: -33%;
+  text-transform: capitalize;
+  font-size: 1.8rem;
+}
+
+.about-list li {
+  margin-bottom: 20px;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+}
+
+@media screen and (max-width: 770px) {
+  .nav-list {
+    display: none;
+  }
+
+  .about {
+    background-color: rgb(243, 241, 241);
+  }
+  .section {
+    padding: 100rem;
+    height: 200%;
+    background-color: rgb(243, 241, 241);
+  }
+  .about-list {
+    position: absolute;
+    top: 140%;
+    left: 0;
+    background-color: rgb(243, 241, 241);
+    padding: 0.3rem;
+    width: 100%;
+  }
+
+  .gambar1 img {
+    position: absolute;
+    top: 25%;
+    left: 8%;
+  }
+}
